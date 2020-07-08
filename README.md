@@ -1,5 +1,9 @@
 # ServiceNow API
 
+In this app we are calling the `GET /sn_sc/servicecatalog/catalogs` api that
+                               Retrieves a list of catalogs to which the user has access based on the passed in parameters.
+
+
 Create a .env file in the project directory and add the following variables
 Here is an example env file:
 `instance=dev64765`<br>
