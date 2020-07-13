@@ -20,9 +20,18 @@ Go to `index.js` and change the incident_description and fill the details of inc
 }`
 
 
-Steps to start the Application:
+<b>Steps to start the Application:</b>
 <br>Step1. Run `npm install` to install all the dependency<br>
 Step2. Add `.env` file with your config details as explained above.<br>
 Step3. Run `node index.js` to start the application.<br>
 
 You can see the results in your console.
+
+<b>Steps to Test the Application:</b><br>
+Step1. Run `npm run test-init` to initialise the test.<br>
+Step2. Run  `npm run test` to start the unit test.<br>
+Step3. Check the results in the console.<br>
+
+<i><b>Note:</b></i> If you get Timeout error for the test then you need to run the test again as it happens when the service now server doesn't responds properly.
+
+
