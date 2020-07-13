@@ -23,19 +23,38 @@ if(sys_limit>0){
     session_url += 'sysparm_limit='+sys_limit;
 }
 
-request.post({
-    url:session_url,
-    headers: header,
-    auth: {
-        'user': authUsername,
-        'pass': authPassword
-    },
-    body :incident_details,
-    json:true
-    },
-    function optionalCallback(err, httpResponse, body) {
+function post_ticket(session_url,header,authUsername,authPassword,incident_details,callback) {
+    request.post({
+            url: session_url,
+            headers: header,
+            auth: {
+                'user': authUsername,
+                'pass': authPassword
+            },
+            body: incident_details,
+            json: true
+        },
+        function (error, response, body) {
+            if (error) {
+                return callback(error || {statusCode: response.statusCode});
+            }
+            callback(null, response.statusCode);
+        });
+}
+
+post_ticket(session_url,header,authUsername,authPassword,incident_details, function (err,statusCode) {
     if (err) {
-        return console.error('upload failed:', err);
+        console.log(err);
+    } else {
+        if(statusCode==201){
+            console.log("Ticket Created Successfully");
+        }
+        else{
+            console.log(("Authorisation failed"));
+        }
     }
-    console.log('Ticket was created succesfully');
 });
+
+module.exports = {
+    api:post_ticket
+};
