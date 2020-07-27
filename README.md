@@ -29,7 +29,7 @@ In this app we are calling the `POST /now/table/incidents` api that
 21. Clck on the list and here you will see a list of tickets for this specific app
 
 
-### Setup
+### NodeJS App Setup
 1. Create a .env file in the project directory and add the following variables Here is an example env file:
 `instance=dev64765`<br>
 `username=admin`<br>
