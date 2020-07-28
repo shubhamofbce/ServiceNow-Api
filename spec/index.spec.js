@@ -16,7 +16,7 @@ const incident_details = {
 
 // url for the request
 
-var session_url = 'https://'+instance+'.service-now.com' +
+var base_url = 'https://'+instance+'.service-now.com' +
     '/api/now/table/'+process.env.table_api_name;
 
 
