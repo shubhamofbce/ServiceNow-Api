@@ -31,10 +31,12 @@ In this app we are calling the `POST /now/table/incidents` api that
 
 ### NodeJS App Setup
 1. Create a .env file in the project directory and add the following variables Here is an example env file:
-`instance=dev64765`<br>
-`username=admin`<br>
-`password=Shubham123`<br>
- <br>
+```
+instance=yourinstance
+username=Your_username
+password=your_password
+table_api_name=your_table  
+ ```
  
  
 

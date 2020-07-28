@@ -8,16 +8,13 @@ const sys_limit = process.env.sys_limit;          // Limit the number of records
 const header = "Accept:application/json";
 
 const incident_details = {
-    'short_description': 'This is a dummy incident created with REST API',
-    'assignment_group':'287ebd7da9fe198100f92cc8d1d2154e',
-    'urgency':'2',
-    'impact':'2'
+    'description': 'This is a dummy incident created with REST API',
 };
 
 // url for the request
 
 var session_url = 'https://'+instance+'.service-now.com' +
-                    '/api/now/table/incident?';
+                    '/api/now/table/'+process.env.table_api_name;
 
 if(sys_limit>0){
     session_url += 'sysparm_limit='+sys_limit;
