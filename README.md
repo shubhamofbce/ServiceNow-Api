@@ -41,12 +41,11 @@ table_api_name=your_table
  
 
 2. Go to `index.js` and change the incident_description and fill the details of incidents(tickets):<br>
-`const incident_details = {`<br>
-    `'short_description': 'This is a dummy incident created with REST API'`<br>
-    `'assignment_group':'287ebd7da9fe198100f92cc8d1d2154e'`,<br>
-    `'urgency':'2'`,<br>
-    `'impact':'2'
-}`
+```
+const incident_details = { 
+   'description': 'This is a dummy incident created with REST API'
+}
+```
 
 
 <b>Steps to start the Application:</b>
