@@ -1,0 +1,7 @@
+graph TD
+	A(Start) --> B[Set Up Service Now]
+	B --> |Get credentials|C[Update the env file]
+	C --> D[Run npm install]
+	D --> E[Start the application node index.js]
+	E --> |401 Authorisation required|B
+	E --> |201 Ticket Created Succesfully|F(Exit)
